@@ -12,7 +12,7 @@ export default function NewPost() {
     event.preventDefault();
 
     // const postUrl = "http://localhost:8080/api/posts";
-    const remoteUrl = "http://43.205.96.75/api/posts";
+    const remoteUrl = "https://43.205.96.75/api/posts";
 
     const formData = new FormData();
     formData.append("image", file);
