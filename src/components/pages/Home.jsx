@@ -10,7 +10,7 @@ function App() {
   let navigate = useNavigate();
 
   useEffect(() => {
-    const remoteUrl = "https://43.205.96.75/api/posts";
+    const remoteUrl = "http://43.205.96.75/api/posts";
     async function getPosts() {
       const result = await axios.get(`${remoteUrl}`);
       setPosts(result.data);
@@ -30,7 +30,7 @@ function App() {
   };
   const deletePostClicked = async ({ id }) => {
     console.log(`deletePostClicked = (${id})`);
-    const remoteUrl = "https://43.205.96.75/api/posts/";
+    const remoteUrl = "http://43.205.96.75/api/posts/";
     await axios.delete(`${remoteUrl}` + id);
     setPosts(posts.filter((post) => post.id !== id));
   };
